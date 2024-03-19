@@ -1,0 +1,231 @@
+@import url("https://fonts.google.com/specimen/Montserrat");
+@import url("https://fonts.google.com/specimen/Oswald");
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Oswald",sans-serif;
+    
+}
+@media screen and (min-width:1153px) {
+    .container{
+        width:100%;
+        height: 100vh;
+        padding: 13vh 15%;
+        }
+        .title{
+           text-align: center;
+           margin-bottom: 50px;
+        }
+        .title h1{
+            text-transform: uppercase;
+            color: black;
+        }
+        .title p{
+            font-size: 0.75rem;
+            margin-top: 10px;
+            font-family: 'Montserrat',sans-serif;
+        }
+        .content{
+            width:100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .card{
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .card h3{
+            text-align: center;
+            padding: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #333333;
+        }
+        .img_box{
+            width:220px;
+            height:250px;
+            overflow: hidden;
+            position: relative;
+        }
+        .img_box img{
+        width:220px;
+        height: 255px;
+        }
+        .img_info{
+            position: absolute;
+            top: 250px;
+            left:0;
+            color: white;
+            width:220px;
+            height:250px;
+            padding:10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .img_info span{
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        
+        }
+        .img_info p{
+            font-size: 0.75rem;
+            text-align: justify;
+            font-family:"Montserrat",sans-serif;
+        }
+        #one:hover .img_box img{
+            transform: translateY(-100%);
+            transition: all 035s ease;
+        }
+        #one:hover .img_box .img_info{
+            background: rgb(129, 183, 238);
+            transform: translateY(-100%);
+            transition: all 0.35s ease;
+        }
+        #two:hover .img_box img{
+            transform: translateY(-100%);
+            transition: all 035s ease;
+        }
+        #two:hover .img_box .img_info{
+            background: rgb(129, 183, 238);
+            transform: translateY(-100%);
+            transition: all 0.35s ease;
+        }
+        #three:hover .img_box img{
+            transform: translateY(-100%);
+            transition: all 035s ease;
+        }
+        #three:hover .img_box .img_info{
+            background: rgb(129, 183, 238);
+            transform: translateY(-100%);
+            transition: all 0.35s ease;
+        }
+        .circle1{
+        position: absolute;
+        width:100%;
+        height:100vh;
+        top:0;
+        left:0;
+        background: rgb(129, 183, 238); ;
+        clip-path: circle(200px at right 600px);
+        }
+        .circle2{
+            position: absolute;
+            width:100%;
+            height:100vh;
+            top:0;
+            left:0;
+            background: rgb(129, 183, 238); ;
+            clip-path: circle(200px at left 40px);
+            }
+}
+@media screen and (max-width: 1153px) {
+    .container {
+        width: 100%;
+        height: auto; /* Changed from 100vh to auto */
+        padding: 13vh 15%;
+    }
+    
+    .title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .title h1 {
+        text-transform: uppercase;
+        color: black;
+    }
+    
+    .title p {
+        font-size: 0.75rem;
+        margin-top: 10px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap; /* Added to wrap cards on smaller screens */
+    }
+    
+    .card {
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px; /* Added some spacing between cards */
+    }
+    
+    .card h3 {
+        text-align: center;
+        padding: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #333333;
+    }
+    
+    .img_box {
+        width: 220px;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .img_box img {
+        width: 100%; /* Changed to 100% to ensure responsiveness */
+        height: auto; /* Changed from fixed height to auto */
+    }
+    
+    .img_info {
+        position: absolute;
+        bottom: 0; /* Changed from top to bottom */
+        left: 0;
+        color: white;
+        width: 100%; /* Changed to 100% to fit parent container */
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        background: rgb(129, 183, 238); /* Background added for better visibility */
+        transform: translateY(100%); /* Initial state changed */
+        transition: all 0.35s ease; /* Moved common transition here */
+    }
+    
+    .img_info span {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
+    .img_info p {
+        font-size: 0.75rem;
+        text-align: justify;
+        font-family: "Montserrat", sans-serif;
+    }
+    
+    .card:hover .img_info {
+        transform: translateY(0); /* Adjusted hover state */
+    }
+    
+    .circle1,
+    .circle2 {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgb(129, 183, 238);
+    }
+    
+   
+    .circle1 {
+        clip-path: circle(100px at right 600px); /* Reduced circle size */
+    }
+
+    .circle2 {
+        clip-path: circle(100px at left 40px); /* Reduced circle size */
+    }
+}
